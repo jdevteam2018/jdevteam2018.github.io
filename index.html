@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jDevTeam 2018</title>
+	<style>
+		html, body {
+			overflow: none;
+			overflow: hidden;
+			width: 100vw;
+			padding: 0;
+			margin: 0;
+			background: black;
+		}
+		@font-face {
+			font-family: TheBeatles;
+			src: url(fonts/thebeatles.ttf);
+		}
+		@font-face {
+			font-family: HardDaysNight;
+			src: url(fonts/harddaysnight.ttf);
+		}
+		@font-face {
+			font-family: JohnLennon;
+			src: url(fonts/johnlennon.ttf);
+		}
+		@keyframes fadein {
+			0% {color:rgba(255,255,255,0);bottom:4vh;letter-spacing:-0.3vw;}
+			100% {color:rgba(255,255,255,1);bottom:0;letter-spacing:0.2vw;}
+		}
+		@-webkit-keyframes fadein {
+			0% {color:rgba(255,255,255,0);bottom:4vh;letter-spacing:-0.3vw;}
+			100% {color:rgba(255,255,255,1);bottom:0;letter-spacing:0.2vw;}
+		}
+		.fadein1, .fadein2 {
+			letter-spacing:0.2vw;
+			color: white;
+			position: relative;
+			animation: 1.6s fadein;
+			-webkit-animation: 1.6s fadein;
+		}
+		.fadein1 {
+			font-family: TheBeatles;
+			font-weight: lighter;
+		}
+		.fadein2 {
+			font-family: JohnLennon;
+			font-weight: lighter;
+		}
+		@media screen and (orientation:portrait) {
+			.fadein1 {
+				font-size: 500%;
+			}
+			.fadein2 {
+				font-size: 250%;
+			}
+		}
+		@media screen and (orientation:landscape) {
+			.fadein1 {
+				font-size: 360%;
+			}
+			.fadein2 {
+				font-size: 200%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div style="display:table;width:100%;height:80vh;">
+		<div style="display:table-cell;vertical-align:middle;">
+  		<div style="margin-left:auto;margin-right:auto;">
+  			<div style="text-align:center;">
+					<h1 class='fadein1'>Coming soon</h1>
+					<h2 class='fadein2'>Check back later for my current projects!</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
