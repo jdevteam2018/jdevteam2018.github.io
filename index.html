@@ -24,53 +24,115 @@
 			src: url(fonts/johnlennon.ttf);
 		}
 		@keyframes fadein {
-			0% {color:rgba(255,255,255,0);bottom:4vh;letter-spacing:-0.3vw;}
-			100% {color:rgba(255,255,255,1);bottom:0;letter-spacing:0.2vw;}
+			0% {opacity:0;color:rgba(255,255,255,0);bottom:4vh;letter-spacing:-0.3vw;}
+			100% {opacity:1;color:rgba(255,255,255,1);bottom:0;letter-spacing:0.2vw;}
 		}
 		@-webkit-keyframes fadein {
-			0% {color:rgba(255,255,255,0);bottom:4vh;letter-spacing:-0.3vw;}
-			100% {color:rgba(255,255,255,1);bottom:0;letter-spacing:0.2vw;}
+			0% {-webkit-opacity:0;color:rgba(255,255,255,0);bottom:4vh;letter-spacing:-0.3vw;}
+			100% {-webkit-opacity:1;color:rgba(255,255,255,1);bottom:0;letter-spacing:0.2vw;}
 		}
-		.fadein1, .fadein2 {
+		@keyframes jump {
+			0% {color:#FFF;font-size:100%;}
+			50% {color:#AAF;font-size:105%;}
+			100% {color:#FFF;font-size:100%;}
+		}
+		@-webkit-keyframes jump {
+			0% {color:#FFF;font-size:100%;}
+			50% {color:#AAF;font-size:105%;}
+			100% {color:#FFF;font-size:100%;}
+		}
+		.fadein {
 			letter-spacing:0.2vw;
 			color: white;
 			position: relative;
 			animation: 1.6s fadein;
 			-webkit-animation: 1.6s fadein;
+			animation-fill-mode: forwards;
+			-webkit-animation-fill-mode: forwards;
 		}
-		.fadein1 {
+		.typea {
 			font-family: TheBeatles;
 			font-weight: lighter;
 		}
-		.fadein2 {
+		.typeb {
 			font-family: JohnLennon;
 			font-weight: lighter;
+			opacity:0;
+			animation-delay: 0.5s;
+			-webkit-animation-delay: 0.5s;
+		}
+		.typec {
+			font-family: HardDaysNight;
+			font-weight: lighter;
+			opacity:0;
+			animation-delay: 2s;
+			-webkit-animation-delay: 2s;
+		}
+		.typed {
+			font-family: TheBeatles;
+			font-weight: lighter;
+			opacity:0;
+			animation-delay: 2.5s;
+			-webkit-animation-delay: 2.5s;
 		}
 		@media screen and (orientation:portrait) {
-			.fadein1 {
+			.typea {
 				font-size: 500%;
 			}
-			.fadein2 {
+			.typeb {
 				font-size: 250%;
+			}
+			.typec {
+				font-size: 150%;
+			}
+			.typed {
+				font-size: 170%;
 			}
 		}
 		@media screen and (orientation:landscape) {
-			.fadein1 {
+			.typea {
 				font-size: 360%;
 			}
-			.fadein2 {
+			.typeb {
 				font-size: 200%;
 			}
+			.typec {
+				font-size: 150%;
+			}
+			.typed {
+				font-size: 160%;
+			}
+		}
+		a {
+			color: white;
+			text-decoration: none;
+		}
+		a:hover {
+			animation: 0.75s jump linear infinite;
+			text-decoration: underline;
 		}
 	</style>
+	<link rel='favicon' type='image/png' href='images/icon.png' />
+	<link rel='icon' type='image/png' href='images/icon.png' />
+	<link rel='shortcut icon' type='image/png' href='images/icon.png' />
+	<link rel='apple-touch-icon' type='image/png' href='images/icon.png' />
 </head>
 <body>
-	<div style="display:table;width:100%;height:80vh;">
+	<div style="display:table;width:100%;height:70vh;">
 		<div style="display:table-cell;vertical-align:middle;">
-  		<div style="margin-left:auto;margin-right:auto;">
-  			<div style="text-align:center;">
-					<h1 class='fadein1'>Coming soon</h1>
-					<h2 class='fadein2'>Check back later for our current projects!</h2>
+  			<div style="margin-left:auto;margin-right:auto;">
+  				<div style="text-align:center;">
+					<h1 class='fadein typea'>Coming soon</h1>
+					<h2 class='fadein typeb'>Check back later for our current projects!</h2>
+					<h4 class='fadein typec'>
+						<a href='https://www.github.com/jDevTeam2018'>GitHub</a> | 
+						<a href='https://www.twitter.com/iPhoneGuy1101'>Twitter</a> | 
+						<a href='mailto:jDevTeam2018+john@gmail.com'>Email</a>
+					</h4>
+					<h5 class='fadein typed'>
+						Wallpaper: &zwj; <a href='/images/desktop_wallpaper.jpg' download="landscape.jpg">Landscape</a> &zwj; 
+						<a href='/images/phone_wallpaper.jpg' download="portrait.jpg">Portrait</a>
+					</h5>
 				</div>
 			</div>
 		</div>
